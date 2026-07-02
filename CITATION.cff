@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Chunk-First API Surface Recovery from JavaScript Bundles"
+authors:
+  - family-names: Yang
+    given-names: Jie Sheng
+    orcid: "https://orcid.org/0009-0004-4554-7197"
+doi: "10.5281/zenodo.21106612"
+url: "https://zenodo.org/records/21106612"
+date-released: "2026-07-01"
+version: "v0.1.0"
+license: "CC-BY-4.0"
