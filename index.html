@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CF-ASR: Chunk-First API Surface Recovery from JavaScript Bundles</title>
-  <meta name="description" content="Paper landing page for CF-ASR: Chunk-First API Surface Recovery from JavaScript Bundles. The page introduces the research problem, method, benchmark highlights, and links to the authoritative Zenodo PDF.">
+  <meta name="description" content="Paper landing page for CF-ASR: Chunk-First API Surface Recovery from JavaScript Bundles. The page introduces the research problem, method, scope, and links to the Zenodo PDF.">
   <meta name="keywords" content="CF-ASR, JavaScript bundle analysis, API surface recovery, lazy chunks, static analysis, Semgrep, frontend security research">
 
   <meta property="og:type" content="article">
@@ -274,30 +274,17 @@
           Modern single-page applications often place API client code outside the JavaScript files directly visible from the initial HTML response. Lazy route chunks, bundler runtime tables, dynamic imports, and framework manifests can hide endpoint evidence from URL extractors that only scan the entry corpus. CF-ASR expands the production JavaScript corpus before endpoint extraction and emits endpoint-oriented records with source provenance, method hints, dynamic path skeletons, and conservative endpoint-only filtering.
         </p>
         <p>
-          In the reviewed benchmark, the paper shows that chunk-first acquisition materially improves endpoint recovery over URL-entry baselines because those baselines frequently miss dormant JavaScript that is never requested during an entry crawl. The paper also studies a bounded model-assisted review stage for composed endpoints and discusses the limits of request-shape recovery relative to endpoint-path recovery.
+          The paper argues that chunk-first acquisition materially improves endpoint recovery over URL-entry baselines because those baselines frequently miss dormant JavaScript that is never requested during an entry crawl. It also studies a bounded model-assisted review stage for composed endpoints and discusses the limits of request-shape recovery relative to endpoint-path recovery.
         </p>
       </section>
 
       <section aria-labelledby="findings">
-        <h2 id="findings">Key paper information</h2>
-        <div class="stats">
-          <div class="stat">
-            <strong>15</strong>
-            reviewed production-mode application benchmarks in the main evaluation set.
-          </div>
-          <div class="stat">
-            <strong>Chunk-first</strong>
-            corpus expansion before endpoint extraction is the central methodological contribution.
-          </div>
-          <div class="stat">
-            <strong>Conservative</strong>
-            endpoint-focused reporting keeps endpoint recovery separate from future request-shape enrichment.
-          </div>
-        </div>
+        <h2 id="findings">Research scope</h2>
         <ul class="list">
-          <li>The paper compares CF-ASR fairly against URL/path-oriented baseline tools instead of claiming capabilities those tools were never designed to provide.</li>
+          <li>CF-ASR focuses on recovering frontend-visible backend API surface evidence from production JavaScript bundles.</li>
+          <li>The method expands hidden and lazy-loaded chunks before endpoint extraction, rather than treating the entry response as the full client-side corpus.</li>
+          <li>The paper separates deterministic endpoint recovery from bounded model-assisted composed-endpoint review.</li>
           <li>Recovered findings are intended for authorized analysis and testing workflows, not as proof that an endpoint is live, reachable, authorized, or vulnerable.</li>
-          <li>The paper keeps deterministic endpoint recovery and bounded model-assisted composed-endpoint recovery as separate evidence layers.</li>
         </ul>
       </section>
 
