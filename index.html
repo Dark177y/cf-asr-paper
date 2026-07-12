@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CF-ASR: Chunk-First API Surface Recovery from JavaScript Bundles</title>
-  <meta name="description" content="Paper landing page for CF-ASR: Chunk-First API Surface Recovery from JavaScript Bundles. The page introduces the research problem, method, scope, and links to the Zenodo PDF.">
+  <meta name="description" content="Paper landing page for CF-ASR: Chunk-First API Surface Recovery from JavaScript Bundles. The page introduces the research problem, method, scope, and archived DOI record.">
   <meta name="keywords" content="CF-ASR, JavaScript bundle analysis, API surface recovery, lazy chunks, static analysis, Semgrep, frontend security research">
 
   <meta property="og:type" content="article">
@@ -19,7 +19,6 @@
   <meta name="citation_author" content="Yang, Jia Shuo">
   <meta name="citation_publication_date" content="2026/07/01">
   <meta name="citation_online_date" content="2026/07/01">
-  <meta name="citation_pdf_url" content="https://zenodo.org/records/21106612/files/cf-asr_paper.pdf?download=1">
   <meta name="citation_abstract_html_url" content="https://dark177y.github.io/cf-asr-paper/">
   <meta name="citation_doi" content="10.5281/zenodo.21106612">
   <meta name="citation_technical_report_institution" content="Independent Researcher">
@@ -233,7 +232,7 @@
 <body>
   <main>
     <article class="card">
-      <p class="eyebrow">Research paper landing page</p>
+      <p class="eyebrow">Paper and reproducibility artifact</p>
       <h1>CF-ASR: Chunk-First API Surface Recovery from JavaScript Bundles</h1>
       <p class="lead">
         CF-ASR studies a simple problem with practical impact: modern frontend applications often hide backend API evidence in lazy-loaded JavaScript chunks that are invisible from the initial HTML response. The paper presents a chunk-first static-analysis workflow that expands the production JavaScript corpus before endpoint extraction and then reports conservative, auditable endpoint findings with source provenance.
@@ -244,8 +243,9 @@
       </p>
 
       <div class="actions">
-        <a class="button primary" href="https://zenodo.org/records/21106612/files/cf-asr_paper.pdf?download=1">Download paper PDF</a>
-        <a class="button" href="https://zenodo.org/records/21106612">Zenodo record</a>
+        <a class="button primary" href="https://zenodo.org/records/21106612">View archived paper</a>
+        <a class="button" href="https://doi.org/10.5281/zenodo.21106612">DOI</a>
+        <a class="button" href="https://github.com/Dark177y/cf-asr-paper">GitHub repository</a>
         <a class="button" href="https://orcid.org/0009-0004-4554-7197">ORCID</a>
       </div>
 
@@ -274,7 +274,7 @@
           Modern single-page applications often place API client code outside the JavaScript files directly visible from the initial HTML response. Lazy route chunks, bundler runtime tables, dynamic imports, and framework manifests can hide endpoint evidence from URL extractors that only scan the entry corpus. CF-ASR expands the production JavaScript corpus before endpoint extraction and emits endpoint-oriented records with source provenance, method hints, dynamic path skeletons, and conservative endpoint-only filtering.
         </p>
         <p>
-          The paper argues that chunk-first acquisition materially improves endpoint recovery over URL-entry baselines because those baselines frequently miss dormant JavaScript that is never requested during an entry crawl. It also studies a bounded model-assisted review stage for composed endpoints and discusses the limits of request-shape recovery relative to endpoint-path recovery.
+          The study evaluates CF-ASR on reviewed production-mode application benchmarks and reports deterministic endpoint-recovery results separately from capability evidence such as method hints, source provenance, dynamic path skeletons, and bounded request-shape clues. Recovered records are intended for authorized triage and dynamic testing, not as proof that endpoints are live, reachable, authorized, or vulnerable.
         </p>
       </section>
 
@@ -283,7 +283,7 @@
         <ul class="list">
           <li>CF-ASR focuses on recovering frontend-visible backend API surface evidence from production JavaScript bundles.</li>
           <li>The method expands hidden and lazy-loaded chunks before endpoint extraction, rather than treating the entry response as the full client-side corpus.</li>
-          <li>The paper separates deterministic endpoint recovery from bounded model-assisted composed-endpoint review.</li>
+          <li>The paper separates deterministic endpoint recovery from capability evidence such as method hints, source provenance, dynamic path skeletons, and bounded request-shape clues.</li>
           <li>Recovered findings are intended for authorized analysis and testing workflows, not as proof that an endpoint is live, reachable, authorized, or vulnerable.</li>
         </ul>
       </section>
@@ -295,14 +295,18 @@
           <dt>Author</dt><dd>Yang, Jia Shuo</dd>
           <dt>Publication date</dt><dd>2026-07-01</dd>
           <dt>DOI</dt><dd><a href="https://doi.org/10.5281/zenodo.21106612">10.5281/zenodo.21106612</a></dd>
-          <dt>PDF</dt><dd><a href="https://zenodo.org/records/21106612/files/cf-asr_paper.pdf?download=1">Zenodo-hosted paper PDF</a></dd>
-          <dt>Release scope</dt><dd>Paper-only public landing page; implementation and reproducibility environment are not included here</dd>
+          <dt>Archived record</dt><dd><a href="https://zenodo.org/records/21106612">Zenodo record</a></dd>
+          <dt>Release scope</dt><dd>Public landing page and paper metadata; the full research workspace is maintained separately</dd>
         </dl>
       </section>
 
       <section aria-labelledby="citation">
         <h2 id="citation">Suggested citation</h2>
         <pre>Yang, J. S. (2026). CF-ASR: Chunk-First API Surface Recovery from JavaScript Bundles. Zenodo. https://doi.org/10.5281/zenodo.21106612</pre>
+        <div class="notice">
+          The DOI-linked Zenodo record is the archived source for the paper and
+          reproducibility artifacts.
+        </div>
       </section>
     </article>
   </main>
