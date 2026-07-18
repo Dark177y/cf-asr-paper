@@ -1,11 +1,10 @@
 # Chunk-First API Surface Recovery from JavaScript Bundles
 
-Public landing page for the CF-ASR paper and archived reproducibility
-artifacts.
+Public research overview for CF-ASR: Chunk-First API Surface Recovery from
+JavaScript Bundles.
 
 - Landing page: https://dark177y.github.io/cf-asr-paper/
-- Zenodo record: https://zenodo.org/records/21106612
-- DOI: https://doi.org/10.5281/zenodo.21106612
+- Researcher ORCID: https://orcid.org/0009-0004-4554-7197
 
-The full research workspace is maintained separately. This repository contains
-only public-facing paper metadata and landing-page content.
+This repository contains the static GitHub Pages introduction for the research.
+It does not publish an implementation or reproducibility environment.
